@@ -55,10 +55,10 @@ def delete():
 
 def action():
     """
-     USE POST OR P TO POST INTO YOUR FACEBOOK ACCOUNT
-     USE GET OR G TO GET DETAILS 
-     USE SEARCH OR S TO SEARCH IN FACEBOOK
-     USE DELETE OR D TO DELETE AN ITEM
+     USE P TO POST INTO YOUR FACEBOOK ACCOUNT
+     USE G TO GET DETAILS 
+     USE S TO SEARCH IN FACEBOOK
+     USE D TO DELETE AN ITEM
     """
     useraction = input("WHAT DO YOU WANT TO DO: ")
     if useraction == 'p':

@@ -6,7 +6,7 @@ from urllib.request import urlopen
 token = input("ENTER YOUR ACCESS TOKEN: ")
 graph = GraphAPI(token)
 
-
+# to post a status or photo 
 def post():
     p_action = input('Message(m) or Photo(p): ')
     if p_action == 'm':
@@ -24,11 +24,11 @@ def post():
 def get():
     # Get my latest posts
     posts = graph.get('me/feed')
-    # print(posts)
     posts = [x['id'] for x in posts['data']]
 
     return posts
 
+# to search facebook
 def search():
     term = input("ENTER YOUR SEARCH TERM: ")
     type = input("ENTER WHAT YOU WANT TO SEARCH(user,page,event,group,place,checkin): ")
@@ -37,6 +37,7 @@ def search():
     for id in result['data']:
         print('result: ', id)
 
+# to delete posts
 def delete():
     p = get()
     for i in p:
